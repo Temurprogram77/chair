@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+    <div class="container">
+        <header>
+            <div class="title">PRODUCT LIST</div>
+            <div class="cards">
+                <div class="dark_white">
+                    <div class="card1">White</div>
+                    <div class="card2">Dark</div>
+                </div>
+                <div class="icon-cart">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                    </svg>  
+                    <span>0</span>                
+                </div>
+            </div>
+        </header>
+
+        <div class="listProduct">
+            <div class="item">
+                <img src="image1.png" alt="">
+                <h2>NAME PRODUCT</h2>
+                <div class="price">$200</div>
+                <button class="addCart">
+                    Add To Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+            <div class="item">
+                <div class="image">
+                    <img src="image1.png" alt="">
+                </div>
+                <div class="name">
+                    NAME
+                </div>
+                <div class="totalPrice">
+                    $200
+                </div>
+                <div class="quantity">
+                    <span class="minus">-</span>
+                    <span>1</span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">CHECK Out</button>
+        </div>
+    </div>
+
+    <script>
+        let card1 = document.querySelector('.card1');
+        let card2 = document.querySelector('.card2');
+        let svg = document.querySelector('svg');
+        let title = document.querySelector('.title');
+
+        card1.addEventListener('click', () => {
+            body.style.background = 'white';
+            body.style.transition = '.5s';
+            title.style.color = 'black';
+            title.style.transition = '.2s';
+            svg.style.transition = '.5s';
+            svg.style.color = 'black'
+        })
+
+        card2.addEventListener('click', () => {
+            body.style.background = 'black';
+            body.style.transition = '.5s';
+            title.style.color = 'white';
+            title.style.transition = '.2s';
+            svg.style.transition = '.2s';
+            svg.style.color = 'white'
+        })
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
